@@ -1,4 +1,8 @@
 steps:
 #Build Docker Image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/${PROGECT_IO}/node-web-app:$SCOMMIT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/${sit323-23t1-lora-liu-27b6c44}/node-web-app:$SCOMMIT_SHA', '.']
+
+#Docker Push
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/${sit323-23t1-lora-liu-27b6c44}/node-web-app:$COMMIT_SHA']
