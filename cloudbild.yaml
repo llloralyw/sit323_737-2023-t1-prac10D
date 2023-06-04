@@ -1,0 +1,4 @@
+steps:
+#Build Docker Image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/${PROGECT_IO}/node-web-app:$SCOMMIT_SHA', '.']
